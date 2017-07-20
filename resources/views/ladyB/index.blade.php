@@ -1,0 +1,119 @@
+@extends('main.main')
+
+@section('title')
+	LadyB African Fashion
+@endsection
+
+{{-- Save this page's link to session --}}
+	{{ Session::put('lastpage','ladyBshop') }}
+@section('content')
+	<div class="clearfix" style="margin:35px;"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-bottom:15px;" id="firstLadyB">
+					<img src="{{ asset('imgs/LLB.jpg') }}" class="img-responsive ladyB solid">
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-bottom:15px;" id="secondLadyB">
+					<img src="{{ asset('imgs/CCB.jpg') }}" class="img-responsive ladyB solid">
+				</div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-bottom:15px;" id="thirdLadyB">
+					<img src="{{ asset('imgs/LLB2.jpg') }}" class="img-responsive ladyB solid">
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	    <div class="container" >
+	        <div class="row">
+	            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	                <div class="post-preview">
+	                     <img src="{{ asset('imgs/bbs.jpg') }}" class="img-circle pull-left solid" alt = "Lady Burgesson's pic" style = "border:solid 4px deeppink;"width="140" height="140"/>
+	                        <h1 class="post-title solid-text text-center">
+	                            LADY BURGESSON AFRICAN FASHION
+	                        </h1>
+	                
+	                       
+	                        <p>
+								Lady Burgesson was conceptualized as an African Fashion brand by a 16-year old Ghanaian teenager in April 2016.  Lady Burgesson uses only eco-friendly materials and fabrics from the African Continent. All LB designs are created using African Print Fabric produced by Ghana Textiles Printing (GTP) which produces fabric using one hundred percent cotton that is legally grown and harvested in Ghana.
+	                        </p>
+	                        <h2 class="post-subtitle solid-text-light">
+	                            MISSION
+	                        </h2>
+	                        <p>
+	                        	Lady Burgesson makes garments that tell positive African stories by researching the history and culture of diverse parts of Africa, and retelling the stories through the clothes that are created for the rest of world.  Each piece of LB’s design process is deeply rooted in the African soil, but not limited to the African continent. Crafted with a blend of ancient and modern fashion styles, Lady Burgession uses the design and creation process to promote African pride and enlighten the non-African wearer about Africa.
+	                        </p>
+	                        <h2 class="post-subtitle solid-text-light">
+	                        	VISION
+	                        </h2>
+	                        <p>
+	                       		 Lady Burgesson seeks to tap into the youth potential in Africa, while offering opportunities for employment and fostering the entrepreneurial spirit to grow the African Fashion Industry. Our bold vision is that by the year 2030, Lady Burgesson will employ sixty thousand people internationally through the adaptation and development of design concepts and collection of materials/fabrics from across the African continent. The garments Lady Burgesson produces will speak volumes about African cultures, while setting the trends for other emerging fashion enterprises. Functioning at full capacity, Lady Burgesson will help to  increase revenue earned by African fabric producers such as GTP and Texmate Textile (TT) in South Africa, Nida Textile Mills in Tanzania and Vimal Textile Ltd in Zambia.
+	                       	</p>
+	                 </div>
+
+	                    <hr>
+	                <!-- Pager -->
+	                <ul class="pager">
+	                    <li class="next pull-right" >
+	                        <a href="ladyBshop" class="solid">View Lady-B's stock   <span class="fa fa-forward" style="color:deeppink;"></span></a>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+        </div>
+        	<hr> 
+        <div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-default solid">
+					<div class="panel-heading solid" style="background-color:deeppink;">
+						<h2 class="panel-title text-center" style="text-shadow: 0px 4px 8px rgba(0,0,0,0.8); font-size:50px;"><i class="fa fa-envelope" style="color:white;"></i> Leave a message with Lady-B</h2><br>
+						
+					</div>
+					<div class="panel-body" style="background-color:orange;">
+						<form action="ladyB-message" method="get">
+						{{ csrf_field() }}
+							<div class="form-group">
+	                            <div class="input-group">
+	                                <span class="input-group-addon solid"><i class="glyphicon glyphicon-user blue"></i></span>
+	                                <input type="text" name="Personname" placeholder="Name" class="form-control solid" required>
+	                            </div>
+                        	</div>
+                        	<div class="form-group">
+	                            <div class="input-group">
+	                                <span class="input-group-addon solid"><i class="glyphicon glyphicon-envelope blue"></i></span>
+	                                <input type="email" name="Personemail" placeholder="Email" class="form-control solid" required>
+	                            </div>
+                        	</div>
+	                        <div class="form-group">
+	                            <div class="input-group">
+	                                <span class="input-group-addon solid"><i class="glyphicon glyphicon-phone blue"></i></span>
+	                                <input type="number" name="Personnumber" placeholder="Phone" class="form-control solid" required>
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <div class="input-group">
+	                                <span class="input-group-addon solid"><i class="glyphicon glyphicon-comment blue"></i></span>
+	                                <textarea name="Personmessage" rows="6" class="form-control solid" type="text" required></textarea>
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                       	 <small class="text text-muted">@commcycle-colors</small>
+	                        	<button type="submit" class="btn btn-info pull-right solid" >Send <i class="glyphicon glyphicon-send"></i> </button>
+	                        </div>
+						</form>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+        <style> 
+
+        </style>
+@endsection
+
+@section('patner')
+	<span style="color:deeppink">@</span>ladyB	
+@endsection
