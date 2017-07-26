@@ -14,10 +14,34 @@ use App\LadyBorder;
 use App\Lblog;
 use App\lbNews;
 use App\Lbmsg;
+use App\Deleted;
 
 class LadyBController extends Controller
 {
 
+  public function deleteItem($admin,$id){
+      $founditem = Ladyb::find($id);
+      $the_item_name = $founditem->Item;
+      $the_item_price = $founditem->Price;
+      $deletedObject = new Deleted();
+      $deletedObject->Name = $admin;
+      $deletedObject->Email = 'Quantity:'.$founditem->Quantity;
+      $deletedObject->Item = $founditem->Item;
+      $deletedObject->Brand = 'Size:'.$founditem->Size;
+      $deletedObject->Category = 'Info: '.$founditem->Info;
+      $deletedObject->Price = $founditem->Price;
+      $deletedObject->Pics = $founditem->Pics;
+      if ($deletedObject->save()){
+        if ($founditem->delete()){
+          $createLog = new Lblog();
+          $createLog->happening = $admin.' deleted '.$the_item_name.' with price ZAR '.$the_item_price;
+          if($createLog->save()){
+            return redirect('ladyB-office');
+          }
+
+        }
+      }
+  }
    public function sendMessage(request $request){
 
         $message = new Lbmsg(); 
@@ -124,12 +148,12 @@ class LadyBController extends Controller
   	$lbs = Ladyb::orderBy('id','DESC')->paginate(6);
   	return view('ladyB.stock',compact('lbs','admins'));
   }
-  public function deleteOrder($id){
+  public function deleteOrder($admin,$id){
     $lborder = LadyBorder::find($id); 
     $lblog = new Lblog();
 
     if ($lborder->delete()){
-      $lblog->happening = explode(':',Session::get('admin'))[0]." deleted ".$lborder->Name."'s order worth ZAR ".$lborder->Price; 
+      $lblog->happening = $admin." deleted ".$lborder->Name."'s order worth ZAR ".$lborder->Price; 
       $lblog->save();
       return redirect('ladyB-order'); 
 

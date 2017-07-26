@@ -44,80 +44,143 @@
 							@if($item->Category=='Gents')
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 									
-									<div class="thumbnail solid " style="max-height:60px;min-height:60px; overflow-y:scroll;">
-										<small class="text text-muted pull-right clearfix">Posted: {{ $item->created_at->diffForHumans() }}</small>
-										<h1 class="panel-title"><i class="fa fa-male text text-primary" style=""></i> {{ $item->Item }}</h1>
-										<p class="text text-muted" style="font-size:15px;"><b>Info: </b>{{ $item->Info }}</p>
-										
-									</div>
+								
 									<div class="panel panel-default item solid">
 										<div class="panel-heading solid">
-											<small class="label label-primary solid" style="background-color:black;"><i class="fa fa-bookmark" style="color:cyan;"> </i> {{ $item->Category }}</small>
+											<small class="label label-primary solid" style="background-color:black;"><i class="fa fa-male" style="color:cyan;"> </i> {{ $item->Item }}</small>
 											
-
-											<small class="post-title label label-info pull-right solid" style="background-color:black;cursor:pointer;"><i class="fa fa-certificate" style="color:cyan;"></i> {{ $item->Brand }}</small>
-											<h1 class="panel-title" style="opacity:0.0">dfjjkl;ad</h1>
+											<small class="post-title label label-info pull-right solid" style="background-color:black;cursor:pointer;"><i class="fa fa-bookmark" style="color:cyan;"></i> {{ $item->Category }}</small>
 										</div>
 										<div classs="panel-body">
 											<img src="{{ $item->Pics }}" class="img-responsive com-image" style="width:100%; height:300px;">
 										</div>
 										<div class="panel-footer clearfix">
 											<input type="hidden" value="shop" name="page">
-											<a type="button" href="add-to-cart/commcycle/{{ $item->id }}" class="btn btn-success pull-right solid">Buy</a>
-											<p class="post-title" style="color:black;cursor:pointer;"><span class="label label-primary solid"><span class="fa fa-money" style="color:white;"> </span> FREE <span></p>
+											<button type="button" data-toggle='modal' data-target='{{ '#modal'.$item->id }}' class="btn btn-warning pull-right solid-two solid-text-light"><span class='glyphicon glyphicon-eye-open'></span> View</button>
+											<p style="opacity:0" class="pull-right">sl</p>											
+											<a type="button" href="add-to-cart/commcycle/{{ $item->id }}" class="btn btn-success pull-right solid-two solid-text-light">Buy</a>
+											<p class="post-title" style="color:black;cursor:pointer;"><span class="label label-primary solid-two solid-text-light"><span class="fa fa-money" style="color:white;"> </span> FREE <span></p>
 										</div>
 									</div>	
 								</div>
+								<!-- ########################## modal for 'Gents items' ########################### -->
+								<div class="modal fade" id='{{ 'modal'.$item->id }}'> 
+					                <div class="modal-dialog modal-md"> 
+					                    <div class="modal-content"> 
+					                        <div class="modal-header"> 
+					                            <button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'></span>&times;<span class="sr-only"></span></button>
+					                            <h4 class='modal-title solid-text-light' style='color:black;'><b>{{ $item->Item }} </b></h4>
+					                        </div>
+					                        <div class='modal-body'>
+					                            <center> 
+					                                <img class='img-thumbnail solid-two' src='{{ $item->Pics }}' style='width:80%; height:250px'>
+					                            </center>
+					                            <p style="color:black;">
+					                            	<span class="label label-success solid-two fontlize solid-text-light">Brand: <b><span class='solid-text-light-two fontlize'>{{ $item->Brand }}</span></b></span> 
+				                                	<span class="label label-warning solid-two solid-text-light">Category: <b><span class='solid-text-light-two'>{{ $item->Category }}</span></b></span><br>
+				                                	<span class="solid-text-light-two"><b>Additional information:</b></span><br><span class=''>{{ $item->Info }}</span><br>
+				                                	<span class="label label-default solid-two solid-text-light pull-right"><b><span class='solid-text-light-two'>Posted by: {{ $item->Name }}</span></b> <small class='fontlize'><b>{{ $item->created_at->diffForHumans() }}</b></small></span> 
+					                            </p>
+					                        </div>
+					                        <div class='modal-footer'> 
+					                            <button class='btn btn-danger solid-two' type='button' data-dismiss='modal'>Close</button>
+					                        </div>
+					                    </div>
+					                </div>
+					            </div>
 							@elseif($item->Category=="Ladies")
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-									<div class="thumbnail solid " style="max-height:60px;min-height:60px; overflow-y:scroll;">
-										<small class="text text-success pull-right clearfix ">Posted: {{ $item->created_at->diffForHumans() }}</small>
-										<h1 class="panel-title"><i class="fa fa-male" style="color:deeppink;"></i> {{ $item->Item }}</h1>
-										<p class="text text-muted" style="font-size:15px;"><b>Info: </b>{{ $item->Info }}</p>
-									</div>
+								
 									<div class="panel panel-default item solid">
 										<div class="panel-heading solid">
-											<small class="label label-primary solid" style="background-color:black;"><i class="fa fa-bookmark" style="color:deeppink;"> </i> {{ $item->Category }}</small>
+											<small class="label label-primary solid" style="background-color:black;"><i class="fa fa-female" style="color:deeppink;"> </i> {{ $item->Item }}</small>
 
 
-											<small class="post-title label label-info pull-right solid" style="background-color:black;cursor:pointer;"><i class="fa fa-certificate" style="color:deeppink;"></i> {{ $item->Brand }}</small>
+											<small class="post-title label label-info pull-right solid" style="background-color:black;cursor:pointer;"><i class="fa fa-bookmark" style="color:deeppink;"></i> {{ $item->Category }}</small>
 										</div>
 										<div classs="panel-body">
 											<img src="{{ $item->Pics }}" class="img-responsive com-image" style="width:100%; height:300px;">
 										</div>
 										<div class="panel-footer clearfix">
-											
-											<a type="button" href="add-to-cart/commcycle/{{ $item->id }}" class="btn btn-success pull-right solid">Buy</a>
-											<p class="post-title" style="color:black;cursor:pointer;"><span class="label label-primary solid"><span class="fa fa-money" style="color:white;"> </span> FREE<span></p>
+											<button type="button" data-toggle='modal' data-target='{{ '#modal'.$item->id }}' class="btn btn-warning pull-right solid-two solid-text-light"><span class='glyphicon glyphicon-eye-open'></span> View</button>
+											<p style="opacity:0" class="pull-right">sl</p>	
+											<a type="button" href="add-to-cart/commcycle/{{ $item->id }}" class="btn btn-success pull-right solid-two solid-text-light">Buy</a>
+											<p class="post-title" style="color:black;cursor:pointer;"><span class="label label-primary solid-two solid-text-light"><span class="fa fa-money" style="color:white;"> </span> FREE<span></p>
 										</div>
 									</div>	
 								</div>
+								<!-- ########################## modal for 'Ladies' items ########################### -->
+								<div class="modal fade" id='{{ 'modal'.$item->id }}'> 
+					                <div class="modal-dialog modal-md"> 
+					                    <div class="modal-content"> 
+					                        <div class="modal-header"> 
+					                            <button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'></span>&times;<span class="sr-only"></span></button>
+					                            <h4 class='modal-title solid-text-light' style='color:black;'><b>{{ $item->Item }} </b></h4>
+					                        </div>
+					                        <div class='modal-body' style='overflow-x: wrap;'>
+					                            <center> 
+					                                <img class='img-thumbnail solid-two' src='{{ $item->Pics }}' style='width:80%; height:250px'>
+					                            </center>
+					                            <p style="color:black;">
+					                            	<span class="label label-success solid-two fontlize">Brand: <b><span class='solid-text-light-two fontlize'>{{ $item->Brand }}</span></b></span>
+				                                	<span class="label label-warning solid-two solid-text-light">Category: <b><span class='solid-text-light-two'>{{ $item->Category }}</span></b></span><br>
+				                                	<span class="solid-text-light-two"><b>Additional information:</b></span><br><span class=''>{{ $item->Info }}</span><br>
+				                                	<span class="label label-default solid-two solid-text-light pull-right"> <b><span class='solid-text-light-two'>Posted by: {{ $item->Name }}</span></b> <small class='fontlize'><b>{{ $item->created_at->diffForHumans() }}</b></small></span>
+					                            </p>
+					                        </div>
+					                        <div class='modal-footer'> 
+					                            <button class='btn btn-danger solid-two' type='button' data-dismiss='modal'>Close</button>
+					                        </div>
+					                    </div>
+					                </div>
+					            </div>
 
 							@elseif($item->Category=="Other")
 								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-									<div class="thumbnail solid "  style="max-height:60px;min-height:60px; overflow-y:scroll;">
-										<small class="text text-success pull-right clearfix">Posted: {{ $item->created_at->diffForHumans() }}</small>
-										<h1 class="panel-title"><i class="fa fa-certificate" style="color:brown;"></i> {{ $item->Item }}</h1>
-										<p class="text text-muted" style="font-size:15px;"><b>Info: </b>{{ $item->Info }}</p>
-									</div>
 
 									<div class="panel panel-default item solid">
 										<div class="panel-heading solid">
-											<small class="label label-primary solid" style="background-color:black;"><i class="fa fa-bookmark" style="color:brown;"> </i> {{ $item->Category }}</small>
+											<small class="label label-primary solid" style="background-color:black;"><i class="fa fa-certificate" style="color:brown;"> </i> {{ $item->Item }}</small>
 											
 
-											<small class="post-title label label-info pull-right solid" style="background-color:black;cursor:pointer;"><i class="fa fa-certificate" style="color:brown;"></i> {{ $item->Brand }}</small>			
+											<small class="post-title label label-info pull-right solid" style="background-color:black;cursor:pointer;"><i class="fa fa-bookmark" style="color:brown;"></i> {{ $item->Category }}</small>			
 										</div>
 										<div classs="panel-body">
 											<img src="{{ $item->Pics }}" class="img-responsive com-image" style="width:100%; height:300px;">
 										</div>
 										<div class="panel-footer clearfix">
-											
-											<a type="button" href="add-to-cart/commcycle/{{ $item->id }}" class="btn btn-success pull-right solid">Buy</a>
-											<p class="post-title" style="color:black;cursor:pointer;"><span class="label label-primary solid"><span class="fa fa-money" style="color:white;"> </span> FREE<span></p>
+											<button type="button" data-toggle='modal' data-target='{{ '#modal'.$item->id }}' class="btn btn-warning pull-right solid-two solid-text-light"><span class='glyphicon glyphicon-eye-open'></span> View</button>
+											<p style="opacity:0" class="pull-right">sl</p>	
+											<a type="button" href="add-to-cart/commcycle/{{ $item->id }}" class="btn btn-success pull-right solid-two solid-text-light">Buy</a>
+											<p class="post-title" style="color:black;cursor:pointer;"><span class="label label-primary solid-two solid-text-light"><span class="fa fa-money" style="color:white;"> </span> FREE<span></p>
 										</div>
 									</div>	
 								</div>
+								<!-- ########################## modal for 'Others' items ########################### -->
+								<div class="modal fade" id='{{ 'modal'.$item->id }}'> 
+					                <div class="modal-dialog modal-md"> 
+					                    <div class="modal-content"> 
+					                        <div class="modal-header"> 
+					                            <button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'></span>&times;<span class="sr-only"></span></button>
+					                            <h4 class='modal-title solid-text-light' style='color:black;'><b>{{ $item->Item }} </b></h4>
+					                        </div>
+					                        <div class='modal-body'>
+					                            <center> 
+					                                <img class='img-thumbnail solid-two' src='{{ $item->Pics }}' style='width:80%; height:250px'>
+					                            </center>
+					                            <p style="color:black;">
+					                            	<span class="label label-success solid-two fontlize solid-text-light">Brand: <b><span class='solid-text-light-two fontlize'>{{ $item->Brand }}</span></b></span> 
+				                                	<span class="label label-warning solid-two solid-text-light">Category: <b><span class='solid-text-light-two'>{{ $item->Category }}</span></b></span><br>
+				                                	<span class="solid-text-light-two"><b>Additional information:</b></span><br><span class=''>{{ $item->Info }}</span><br>
+				                                	<span class="label label-default solid-two solid-text-light pull-right"><b><span class='solid-text-light-two'>Posted by: {{ $item->Name }}</span></b> <small class=' fontlize'><b>{{ $item->created_at->diffForHumans() }}</b></small></span> 
+					                            </p>
+					                        </div>
+					                        <div class='modal-footer'> 
+					                            <button class='btn btn-danger solid-two' type='button' data-dismiss='modal'>Close</button>
+					                        </div>
+					                    </div>
+					                </div>
+					            </div>
 							@endif
 						@empty 
 							<p class="alert alert-info solid">There are no items available in the Commcycle shop for now</p>

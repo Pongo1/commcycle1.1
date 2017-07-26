@@ -30,12 +30,28 @@
                                                 <td class="text text-warning">{{ $order->Address }}</td>
                                                 <td class="text text-warning">{{ $order->Items }}</td>
                                                 <td class="text text-success">{{ $order->Price }}</td>
-                                        
                                                 <td class="text text-success">{{ $order->created_at->diffForHumans() }}</td>
                                         @if(Session::get('lb-admin-type')=='superuser')
-                                                <td ><a class="btn btn-danger solid" href="ladyB-order-delete/{{ $order->id }}"><span class="fa fa-trash"></span></a></td>
+                                                <td ><button class="btn btn-danger btn-xs pull-right solid-two" type='button' data-toggle='modal' data-target='#LadyB-order-{{ $order->id }}'><i class="glyphicon glyphicon-trash"></i></button></td>
                                         @endif
                                             </tr>
+                                <!-- ######################## DELETE LADYB ITEM  CONFIRMATION MODAL ################### --> 
+                        <div class='modal fade' id='{{ 'LadyB-order-'.$order->id }}'>
+                            <div class='modal-dialog modal-sm'>
+                                <div class='modal-content'> 
+                                    <div class='modal-header'> 
+                                        <button type='button' class='close' data-dismiss='modal'><span aria-hidden='true'></span>&times;<span class="sr-only"></span></button>
+                                        <h3 class='modal-title'>Delete</h3>
+                                    </div>
+                                    <div class='modal-body'> 
+                                        <small>{{ explode(":",Session::get('admin'))[0] }}! are you sure you want to delete <b>{{ $order->Name }}'s </b>order?</small>
+                                    </div>
+                                    <div class='modal-footer'> 
+                                         <a href="ladyB-order-delete/{{ explode(":",Session::get('lb-admin'))[0] }}/{{ $order->id }}" class="btn btn-danger pull-right solid-two">Yes</a>  
+                                    </div>
+                                </div> 
+                            </div> 
+                        </div>
                                         @empty 
                                             <tr>
                                                 <td>Nothing</td>

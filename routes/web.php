@@ -61,7 +61,7 @@ Route::get('delete-cart-item/{product_quantity}/{product_price}/{id}','CartContr
 
 	// Route::get('selected-item/shopB/{id}','CartController@addToCartShopB');
 
-Route::get('showcart','CartController@showCart');
+Route::get('showcart',['uses'=>'CartController@showCart', 'as' =>'cart.show']);
 
 Route::get('show','CartController@showStuff');
 
@@ -102,7 +102,7 @@ Route::get('ladyB-stock','LadyBController@showStock');
 
 Route::get('ladyB-order','LadyBController@showOrders');
 
-Route::get('ladyB-order-delete/{id}','LadyBController@deleteOrder');
+Route::get('ladyB-order-delete/{admin}/{id}','LadyBController@deleteOrder');
 
 Route::get('ladyB-sign-out','LadyBController@signOut');
 
@@ -115,6 +115,8 @@ Route::get('ladyB-admin-password-change/{id}','LadyBController@adminPasswordChan
 Route::get('ladyB-news-post',['uses'=>'LadyBController@adminNewsPost','as'=>'lb.news.post']);
 
 Route::get('ladyB-message','LadyBController@sendMessage');
+
+Route::get('lb-admin-deletion/{admin}/{id}',['uses'=>'LadyBController@deleteItem','as'=>'lb.admin.delete']);
 
 //-----------------------------------------------------------------
 

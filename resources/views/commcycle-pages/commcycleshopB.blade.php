@@ -31,7 +31,7 @@
 								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 									<div class="panel panel-default solid">
 										<div class="panel-heading text text-muted">
-											<small class="label label-danger pull-right solid" style="background-color:black;"><i class="fa fa-bookmark" style="color:cyan;"></i> {{ $item->Category }}</small>
+											<small class="label label-danger pull-right solid-two" style="background-color:black;"><i class="fa fa-bookmark" style="color:cyan;"></i> {{ $item->Category }}</small>
 											<h1 class="panel-title"><i class="fa fa-male" style="color:cyan;"></i> {{ $item->Item }}</h1>
 										</div>
 										<div class="panel-body" style="max-height:150px; min-height:150px; overflow-y:scroll;">
@@ -41,8 +41,8 @@
 											<small class="text text-success pull-right">{{ $item->created_at->diffForHumans() }}</small><br>								
 										</div>
 										<div class="panel-footer clearfix">
-											<p class="label label-primary solid"><i class="fa fa-money"></i> FREE </p>
-											<a type="button" href="add-to-cart/commcycleB/{{ $item->id }}" class="btn btn-success pull-right solid">Buy</a>
+											<p class="label label-primary solid-two"><i class="fa fa-money"></i> FREE </p>
+											<a type="button" href="add-to-cart/commcycleB/{{ $item->id }}" class="btn btn-success pull-right solid-two">Buy</a>
 										</div>
 									</div>
 								</div>
@@ -50,7 +50,7 @@
 								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 									<div class="panel panel-default solid">
 										<div class="panel-heading text text-muted">
-											<small class="label label-danger pull-right solid" style="background-color:black;"><i class="fa fa-bookmark" style="color:deeppink;"></i> {{ $item->Category }}</small>
+											<small class="label label-danger pull-right solid-two" style="background-color:black;"><i class="fa fa-bookmark" style="color:deeppink;"></i> {{ $item->Category }}</small>
 											<h1 class="panel-title"><i class="fa fa-female" style="color:deeppink;"></i> {{ $item->Item }}</h1>
 										</div>
 										<div class="panel-body" style="max-height:150px; min-height:150px; overflow-y:scroll;">
@@ -60,8 +60,8 @@
 											<small class="text text-success pull-right">{{ $item->created_at->diffForHumans() }}</small><br>								
 										</div>
 										<div class="panel-footer clearfix">
-											<p class="label label-primary solid"><i class="fa fa-money"></i> FREE </p>
-											<a type="button" href="add-to-cart/commcycleB/{{ $item->id }}" class="btn btn-success pull-right solid">Buy</a>
+											<p class="label label-primary solid-two"><i class="fa fa-money"></i> FREE </p>
+											<a type="button" href="add-to-cart/commcycleB/{{ $item->id }}" class="btn btn-success pull-right solid-two">Buy</a>
 										</div>
 									</div>
 								</div>
@@ -69,7 +69,7 @@
 								<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 									<div class="panel panel-default solid">
 										<div class="panel-heading text text-muted">
-											<small class="label label-danger pull-right solid" style="background-color:black;"><i class="fa fa-bookmark" style="color:brown;"></i> {{ $item->Category }}</small>
+											<small class="label label-danger pull-right solid-two" style="background-color:black;"><i class="fa fa-bookmark" style="color:brown;"></i> {{ $item->Category }}</small>
 											<h1 class="panel-title"><i class="fa fa-certificate" style="color:brown;"></i> {{ $item->Item }}</h1>
 										</div>
 										<div class="panel-body" style="max-height:150px; min-height:150px; overflow-y:scroll;">
@@ -79,8 +79,8 @@
 											<small class="text text-success pull-right">{{ $item->created_at->diffForHumans() }}</small><br>								
 										</div>
 										<div class="panel-footer clearfix">
-											<p class="label label-primary solid"><i class="fa fa-money"></i> FREE </p>
-											<a type="button" href="add-to-cart/commcycleB/{{ $item->id }}" class="btn btn-success pull-right solid">Buy</a>
+											<p class="label label-primary solid-two"><i class="fa fa-money"></i> FREE </p>
+											<a type="button" href="add-to-cart/commcycleB/{{ $item->id }}" class="btn btn-success pull-right solid-two">Buy</a>
 										</div>
 									</div>
 								</div>

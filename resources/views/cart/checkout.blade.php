@@ -51,8 +51,13 @@
 		                        @endforeach
 	                        
 	                        <div class="form-group">
-	                       	 <h4 class="text text-success"><span class="label label-success solid"><i class="fa fa-money"></i> ZAR {{ Session::get('cart')->price }}</span> </h4>
-	                        	<button type="submit" class="btn btn-success pull-right solid" >checkout <i class="glyphicon glyphicon-check"></i> </button>
+
+	                        <button type="submit" class="btn btn-success pull-right solid-two" >checkout <i class="glyphicon glyphicon-check"></i> </button><small class="pull-right" style="opacity: 0">s</small>
+	                        <a class="btn btn-danger pull-right solid-two" href='{{ route('cart.show') }}'><i class="fa fa-backward"></i></a>
+
+	                       	 <h4 class="text text-success"><span class="label label-success solid-two"><i class="fa fa-money"></i> ZAR {{ Session::get('cart')->price }}</span> </h4>
+	                       	 	
+	                        	
 	                        </div>
 						</form>
 						
