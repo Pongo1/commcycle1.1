@@ -49,7 +49,7 @@ class CartController extends Controller
 		$cart->quantity = $cart->quantity - $product_quantity;
 		$cart->price = $cart->price - $product_price;
 		if ($cart->quantity ==0){
-			Session::flush();
+			Session::forget('cart');
 			return redirect('shop');
 		}else{
 			return redirect('showcart');
@@ -90,7 +90,7 @@ class CartController extends Controller
 		//$newOrder->from = "usual"; 	
 		if ($newOrder->save()){
 			$lborder->save(); 
-			Session::flush(); 
+			Session::forget('cart'); 
 			Session::put('msg','You order has been placed!. You will here from us soon, keep calm and checkout other merchandise');
 			return redirect('shop');
 			//send email to ladyB here 

@@ -5,7 +5,7 @@
         	@section('content')
         	<div style="margin-top:50px;"></div>
 	        	<div class="row">
-					<div class="col-md-12 col-lg-12 col-xs-12  col-sm-12">
+					<div class="col-md-9 col-lg-9 col-xs-12  col-sm-12">
 				        <div class="list-group" style="min-height:300px; max-height:700px;overflow-y:scroll">
 				            <a class="list-group-item active solid" style="background:deeppink;">
 				                <h4 class="list-group-item-heading solid-text-light"><span class="fa fa-envelope"></span> Messages from people</h4>
@@ -24,7 +24,7 @@
 					        @endforelse
 				        </div>
 				    </div>
-				    <div class="col-md-12 col-lg-12 col-xs-12  col-sm-12" style="margin-bottom:270px">
+				    <div class="col-md-9 col-lg-9 col-xs-12  col-sm-12" style="margin-bottom:270px">
 				        <div class="list-group " style="min-height:200px; max-height:700px;overflow-y:scroll">
 				            <a  class="list-group-item active solid" style="background-color: deeppink;">
 				                <h4 class="list-group-item-heading solid-text-light"><span class="fa fa-edit"></span> Logs</h4>

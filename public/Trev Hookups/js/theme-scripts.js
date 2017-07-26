@@ -32,14 +32,17 @@ $('#seller').animate({width: '400',height:'500'},1000);
 $('#helping').animate({width: '500',height:'300'},2000);
 $('#newsBar').animate({top: '20px'},1000);
 //$('#newsBar').animate({left: '930px'},2000);
-$('#commcycleTitle').animate({fontSize: '40px'},1000);
+$('#commcycleTitle').animate({fontSize: '40px'},700);
 $('#thirdLadyB').animate({top: '10px'},2000);
 $('#secondLadyB').animate({top: '10px'},2000);
 $('#firstLadyB').animate({top: '10px'},2000);
 $('#ladyBBanner').animate({left:'25px'},2000);
-$('#lb1').animate({width:'270'},1000);
-$('#lb2').animate({width:'270'},1000);
-$('#lb3').animate({width:'270'},1000);
+$('#ladyBBanner').animate({left:'25px'},2000);
+$('#ladyB-Top').animate({left:'100px'},1000);
+
+  // $('#lb1').animate({width:'270'},1000);
+  // $('#lb2').animate({width:'270'},1000);
+  // $('#lb3').animate({width:'270'},1000);
 
 
 

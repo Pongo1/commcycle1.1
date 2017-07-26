@@ -126,11 +126,20 @@
         box-shadow:0 6px 8px rgba(0,0,0,0.8);
 
     }
+    .solid-two{
+        box-shadow:0 3px 4px rgba(0,0,0,0.5);
+
+    }
     .solid-text{
         text-shadow: 0px 4px 8px rgba(0,0,0,0.8);
     }
+
     .solid-text-light{
         text-shadow: 0px 3px 6px rgba(0,0,0,0.6);
+
+    }
+    .solid-text-light-two{
+        text-shadow: 0px 2px 4px rgba(0,0,0,0.4);
 
     }
     .ladyB{
@@ -151,6 +160,8 @@
         border-bottom-width:5;
 
 
+    }.fontlize{
+        font-family: Arial, 'Helvetica', sans-serif;
     }
 
     a{

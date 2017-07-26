@@ -10,16 +10,67 @@
 	<div class="clearfix" style="margin:35px;"></div>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12">
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-bottom:15px;" id="firstLadyB">
-					<img src="{{ asset('imgs/LLB.jpg') }}" class="img-responsive ladyB solid">
+			<div class="col-md-9 col-xs-12" id="ladyB-Top">
+				<div id='ladyB-models' class='carousel slide' data-ride='carousel'>
+					<!-- indicators --> 
+					<ol class='carousel-indicators'> 
+						<li data-target='#ladyB-models' data-slid-to='0' class='active'></li>
+						<li data-target='#ladyB-models' data-slid-to='1'></li>
+						<li data-target='#ladyB-models' data-slid-to='2'></li>
+						<li data-target='#ladyB-models' data-slid-to='3'></li>
+						<li data-target='#ladyB-models' data-slid-to='4'></li>
+						<li data-target='#ladyB-models' data-slid-to='5'></li>
+						
+					</ol>
+					<!-- pages in carousel --> 
+					<div class='carousel-inner lbModel solid' role='listbox' >
+						<div class='item active'>
+							<center>
+								<img src="{{ asset('imgs/LLB.jpg') }}"  class="img-responsive lbPic">
+							</center>
+						</div>
+						<div class='item'>
+							<center>
+								<img src="{{ asset('imgs/CCB.jpg') }}"  class="img-responsive lbPic">		
+							</center>					
+						</div>
+						<div class='item'>
+							<center>
+								<img src="{{ asset('imgs/LLB2.jpg') }}"  class="img-responsive lbPic">
+							</center>							
+						</div>
+						<div class='item'>
+							<center>
+								<img src="{{ asset('imgs/utani.jpg') }}"  class="img-responsive lbPic">
+							</center>
+						</div>
+						<div class='item'>
+							<center>
+								<img src="{{ asset('imgs/armpit.jpg') }}"  class="img-responsive lbPic">		
+							</center>					
+						</div>
+						<div class='item'>
+							<center>
+								<img src="{{ asset('imgs/gh.jpg') }}"  class="img-responsive lbPic">
+							</center>							
+						</div>
+						<a class='left carousel-control' href='#ladyB-models' role='button' data-slide='prev'> 
+							<span class='glyphicon glyphicon-chevron-left' aria-hidden='true'></span>
+						</a> 
+						<a class='right carousel-control' href='#ladyB-models' role='button' data-slide='next'> 
+							<span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span>
+						</a> 
+					</div>
 				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-bottom:15px;" id="secondLadyB">
-					<img src="{{ asset('imgs/CCB.jpg') }}" class="img-responsive ladyB solid">
-				</div>
-				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-bottom:15px;" id="thirdLadyB">
-					<img src="{{ asset('imgs/LLB2.jpg') }}" class="img-responsive ladyB solid">
-				</div>
+					{{-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-bottom:15px;" id="firstLadyB">
+						<img src="{{ asset('imgs/LLB.jpg') }}" class="img-responsive ladyB solid">
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-bottom:15px;" id="secondLadyB">
+						<img src="{{ asset('imgs/CCB.jpg') }}" class="img-responsive ladyB solid">
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding-bottom:15px;" id="thirdLadyB">
+						<img src="{{ asset('imgs/LLB2.jpg') }}" class="img-responsive ladyB solid">
+					</div> --}}
 			</div>
 		</div>
 	</div>
@@ -110,7 +161,26 @@
 	</div>
 
         <style> 
+        	.lbModel{
+        		border:solid 10px deeppink;
+        		border-left-width:1px;
+        		border-right-width:1px; 
+        		border-top-right-radius: 10px; 
+        		border-right-color:black ;   
+         		border-left-color:black ;       		
+        		border-top-left-radius: 10px; 
+        		border-bottom-right-radius: 10px;   
+        		border-bottom-left-radius: 10px;		
 
+        	}
+        	.lbPic{
+        		height:520px;
+        		width:65%;
+
+        	}
+        	#ladyB-Top{
+        		position:relative;
+        	}
         </style>
 @endsection
 
