@@ -11,7 +11,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-					<img class="img-responsive solid" id="leroy" autofocus="autofocus" src ="imgs/Lee-2.JPG" style="width:40px; height:30px;" alt="leroy's image">
+					<img class="img-responsive solid" id="leroy" autofocus="autofocus" src ="imgs/Lee-2.jpg" style="width:40px; height:30px;" alt="leroy's image">
 					<div class="text-center"> 
 						<h3 class="solid-text-light">LEROY MWASARU</h3> 
 						<h4 class="solid-text-light">Co-founder</h4>
@@ -19,7 +19,7 @@
 					</div>
 				</div>
 				<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-					<img class="img-responsive solid" id="soumaya" src ="{{ asset('imgs/soumaya-2.JPG') }}" style="width:40px; height:30px;" alt="leroy's image">
+					<img class="img-responsive solid" id="soumaya" src ="{{ asset('imgs/Soumaya-2.jpg') }}" style="width:40px; height:30px;" alt="leroy's image">
 					<div class="text-center"> 
 						<h3 class="solid-text-light">SOUMAYA DAMMAK</h3> 
 						<h4 class="solid-text-light">Co-founder</h4>
@@ -27,7 +27,7 @@
 					</div>
 				</div>
 				<div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
-					<img class="img-responsive solid" id="frimpong" src ="{{ asset('imgs/Frimpi-2.JPG') }}" style="width:40px; height:30px;" alt="leroy's image">
+					<img class="img-responsive solid" id="frimpong" src ="{{ asset('imgs/Frimpi-2.jpg') }}" style="width:40px; height:30px;" alt="leroy's image">
 					<div class="text-center"> 
 						<h3 class="solid-text-light">FRIMPONG O.AGYEMANG</h3> 
 						<h4 class="solid-text-light">CT0</h4>

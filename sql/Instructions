@@ -1,0 +1,4 @@
+The above file contains all the tables for commcycle. 
+Create a database called commcycle with username root and no password; other wise go to the .env file and fill in the database parameters with 
+your db environment. 
+Import this table into the database called commcycle or any other you have created. 
