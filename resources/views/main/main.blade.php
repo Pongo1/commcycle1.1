@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
    <title>@yield('title')</title>
-   <link rel="icon" type="image" href="{{ asset('imgs/social.png') }}">
+   <link rel="icon" type="image" href="{{ asset('imgs/Social.png') }}">
 
     <!-- Styles -->
    <!-- <link href="{{ asset('Trev Hookups/css/app.css') }}" rel="stylesheet"> -->
@@ -16,7 +16,7 @@
     <link href="{{ asset('Trev Hookups/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('Trev Hookups/css/landing-page.css') }}" rel="stylesheet">
     <link href="{{ asset('Trev Hookups/css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('Trev Hookups/css/commcycle.css') }}" rel="stylesheet">
+    
     <link href="{{ asset('font/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/artificial/com-global.css') }}" rel="stylesheet">
     <script src="{{ asset('js/artificial/all.js') }}"></script>
@@ -34,7 +34,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="commcycle" id ="lb"><img src="{{ asset('imgs/social.png') }}" style="width:35px; height:25px;"></a>
+                <a class="navbar-brand" href="commcycle" id ="lb"><img src="{{ asset('imgs/Social.png') }}" style="width:35px; height:25px;"></a>
                 <a class="navbar-brand solid-text" href="commcycleshop">@<span style="color:deeppink;">com</span><span style="color:orange;">mcy</span><span style="color:cyan;">cle</span></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -92,7 +92,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="commcycle" id ="lb"><img src="{{ asset('imgs/social.png') }}" style="width:35px; height:25px;"></a>
+                <a class="navbar-brand" href="commcycle" id ="lb"><img src="{{ asset('imgs/Social.png') }}" style="width:35px; height:25px;"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
